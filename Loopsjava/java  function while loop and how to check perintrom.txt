@@ -1,0 +1,43 @@
+{
+    public static void main (String[] args){
+        // 5%2 =>1
+        //12%7 =>5
+        int s= sod(232);
+        System.out.println(isPal(12241));
+
+    }
+
+    private static boolean isPal(int n)
+    {
+        int r = reverse(n);
+        if(n == r)
+        {
+            return true;
+        }
+        else
+            return false;
+    }
+
+    public static int reverse( int n)
+    {
+        //n=5443
+        int r= 0;
+        while (n>0){
+            int digit = n%10;
+            r = r*10 + digit;
+            n = n/10;
+        }
+        return r;//3
+    }
+
+    public static int sod (int n)
+    {
+        int sum =0;
+        while(n>0)
+        {
+            int digit = n % 10;
+            n = n/10;
+        }
+        return sum;
+    }
+}
